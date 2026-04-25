@@ -17,9 +17,22 @@ Python (pandas, numpy, prophet, scikit-learn, plotly) · K-Means · Docker
 
 ## Ce que j'ai trouvé
 
-Les ventes montrent une saisonnalité forte avec des pics en novembre-décembre (+43% vs moyenne).
-La segmentation K-Means révèle 4 profils clients distincts : Gros acheteurs (8%), Réguliers (27%), Occasionnels (41%), Inactifs (24%).
-Les gros acheteurs représentent 8% des clients mais génèrent 34% du chiffre d'affaires.
+Sans segmentation, on divise les clients en gros/petits dépensiers — une seule dimension.
+Le K-Means révèle que la fréquence d'achat est plus discriminante que le montant par transaction.
+
+Les Gros acheteurs et les Occasionnels ont quasiment le même panier moyen (310€ vs 297€)
+mais une fréquence 4x supérieure (24 achats vs 5). Sans clustering, ces clients
+seraient invisibles dans une analyse classique.
+
+Résultat : l'entreprise peut concentrer son budget marketing sur les vrais
+moteurs de CA plutôt que sur les gros paniers ponctuels — une différence
+de stratégie qui peut représenter plusieurs millions d'euros sur une vraie base client.
+
+Segments identifiés sur 50 000 clients :
+- Gros acheteurs (12%) — 24 achats/an → programme fidélité premium
+- Réguliers (37,5%) — coeur de cible → offres personnalisées
+- Occasionnels (38,2%) → campagnes de relance
+- Inactifs (12,3%) → win-back ou abandon
 
 ## Lancer le projet
 
